@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faebf057cc9fa4b4ab2020816d46b5ab, type: 3}
-  m_Name: Axe
+  m_Script: {fileID: 11500000, guid: 1878012c218f59141b10a85c42da391e, type: 3}
+  m_Name: YellowPlant
   m_EditorClassIdentifier: 
-  displayName: Axe
-  description: Can be used to gather resources.
+  displayName: 
+  description: 
   type: 1
-  icon: {fileID: 21300000, guid: 80bfdb57eb1e4104eaf8527096927ed2, type: 3}
-  dropPrefab: {fileID: 3058356568843517025, guid: d7fd19153bff41b4e918403c7418810f, type: 3}
+  icon: {fileID: 0}
+  dropPrefab: {fileID: 0}
   canStack: 0
   maxStackAmount: 0
