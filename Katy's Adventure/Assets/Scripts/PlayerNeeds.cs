@@ -40,20 +40,20 @@ public class PlayerNeeds : MonoBehaviour, IDamagable
         power.uiBar.fillAmount = power.GetPercentage();
     }
 
-    // adds to the player's HEALTH
+    // adds to the player's health
     public void Heal (float amount)
     {
         health.Add(amount);
     }
 
-    // adds to the player's POWER
+    // adds to the player's power
     public void Eat (float amount)
     {
         power.Add(amount);
     }
 
   
-    // called when the player takes physical damage (fire, enemy, etc)
+    // called when the player takes physical damage (enemy)
     public void TakePhysicalDamage (int amount)
     {
         health.Subtract(amount);

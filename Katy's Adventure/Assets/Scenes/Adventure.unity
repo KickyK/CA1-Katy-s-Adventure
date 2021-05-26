@@ -1772,6 +1772,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &357490008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357490003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c37d90a7b050f43b760eada9bbd6d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health:
+    curValue: 0
+    maxValue: 100
+    startValue: 100
+    regenRate: 0
+    decayRate: 0
+    uiBar: {fileID: 1712415431}
+  power:
+    curValue: 0
+    maxValue: 100
+    startValue: 100
+    regenRate: 0
+    decayRate: 1
+    uiBar: {fileID: 491956224}
+  noPowerHealthDecay: 1
+  onTakeDamage:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!195 &357490013
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -12714,15 +12744,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3157603431195446837, guid: 866cd1e8a0765164b8c8f1a0d36be224, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -6.91
       objectReference: {fileID: 0}
     - target: {fileID: 3157603431195446837, guid: 866cd1e8a0765164b8c8f1a0d36be224, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.7
+      value: 9.43
       objectReference: {fileID: 0}
     - target: {fileID: 3157603431195446837, guid: 866cd1e8a0765164b8c8f1a0d36be224, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.91
+      value: -22.19
       objectReference: {fileID: 0}
     - target: {fileID: 3157603431195446837, guid: 866cd1e8a0765164b8c8f1a0d36be224, type: 3}
       propertyPath: m_LocalRotation.w
