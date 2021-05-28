@@ -5,81 +5,37 @@ using UnityEngine.AI;
 
 public class PlayerScript : MonoBehaviour
 {
-    private NavMeshAgent agent;
-    private Camera mainCamera;
+    Animator playerAnimator;
+    NavMeshAgent navMeshAgent;
+    bool pRunning = false;
 
-    private bool turning;
-    private Quaternion targetRot;
-
-    private PlayerAnimation playerAnim = new PlayerAnimation();
-
-    // Use this for initialization
     void Start()
     {
-        mainCamera = Camera.main;
-
-        agent = GetComponent<NavMeshAgent>();
-
-        playerAnim.Init(GetComponentInChildren<Animator>());
+        playerAnimator = GetComponent<Animator>();
+        navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void Update() 
     {
-        if (Input.GetMouseButtonDown(0) && !Extensions.IsMouseOverUI())
-            OnClick();
-
-        if (turning && transform.rotation != targetRot)
-        {
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, 15f * Time.deltaTime);
-        }
-
-        playerAnim.UpdateAnimation(agent.velocity.sqrMagnitude);
-    }
-
-    void OnClick()
-    {
-        Debug.Log("Left Clicked!");
-
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        Ray camToScreen = mainCamera.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(camToScreen, out hit, Mathf.Infinity))
+        if (Input.GetMouseButtonDown(0))
         {
-            if (hit.collider != null)
+            if (Physics.Raycast(ray, out hit, 100f))
             {
-                Interactable interactable = hit.collider.GetComponent<Interactable>();
-
-                if (interactable != null)
-                {
-                    if (!interactable)
-                        MovePlayer(interactable.InteractPosition());
-
-                    interactable.Interact(this);
-                }
-                else
-                {
-                    MovePlayer(hit.point);
-                }
+                navMeshAgent.destination = hit.point;
             }
         }
-    }
-
-    public bool CheckIfArrived()
-    {
-        return (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance);
-    }
-
-    void MovePlayer(Vector3 targetPosition)
-    {
-        turning = false;
-        agent.SetDestination(targetPosition);
-    }
-
-    public void SetDirection(Vector3 targetDirection)
-    {
-        turning = true;
-        targetRot = Quaternion.LookRotation(targetDirection - transform.position);
+        if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
+        {
+            pRunning = false;
+        }
+        else
+        {
+            pRunning = true;
+        }
+        playerAnimator.SetBool("isRunning", pRunning);
     }
 }
 
