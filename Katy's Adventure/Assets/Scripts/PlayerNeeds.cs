@@ -50,7 +50,7 @@ public class PlayerNeeds : MonoBehaviour, IDamagable
     public void Eat (float amount)
     {
         power.Add(amount);
-    }
+    } 
 
   
     // called when the player takes physical damage (enemy)

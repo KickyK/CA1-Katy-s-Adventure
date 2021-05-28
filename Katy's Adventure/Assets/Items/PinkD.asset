@@ -15,7 +15,7 @@ MonoBehaviour:
   displayName: Pink Donut
   description: The best donut ever!
   type: 2
-  icon: {fileID: 0}
-  dropPrefab: {fileID: 0}
+  icon: {fileID: 21300000, guid: c668b3a4f6b90e545b09ec15df6970cb, type: 3}
+  dropPrefab: {fileID: 5663018374024361636, guid: 1c6e74d09d3bf9b408d97634be96fff4, type: 3}
   canStack: 1
   maxStackAmount: 10

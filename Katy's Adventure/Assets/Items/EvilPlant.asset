@@ -15,7 +15,7 @@ MonoBehaviour:
   displayName: Orange Evil
   description: This plant can kill you!
   type: 0
-  icon: {fileID: 0}
-  dropPrefab: {fileID: 0}
+  icon: {fileID: 21300000, guid: 215d1f2e2345e914689ff324b0416f1f, type: 3}
+  dropPrefab: {fileID: 902661319316625910, guid: fd59eaa254b3c904bb4670e1a14822c7, type: 3}
   canStack: 1
   maxStackAmount: 10

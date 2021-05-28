@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1878012c218f59141b10a85c42da391e, type: 3}
   m_Name: WhiteD
   m_EditorClassIdentifier: 
-  displayName: 
-  description: 
+  displayName: White donut
+  description: Pure Heaven!
   type: 2
-  icon: {fileID: 0}
-  dropPrefab: {fileID: 0}
-  canStack: 0
-  maxStackAmount: 0
+  icon: {fileID: 21300000, guid: e82a0a8e1da90b04ca7fb4862516bec8, type: 3}
+  dropPrefab: {fileID: 8220203292646058933, guid: 1065d281b7912b74ebc777819816ca5e, type: 3}
+  canStack: 1
+  maxStackAmount: 5

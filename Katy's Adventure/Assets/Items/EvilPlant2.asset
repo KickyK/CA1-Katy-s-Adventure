@@ -15,7 +15,7 @@ MonoBehaviour:
   displayName: Blue Evil
   description: This plant is a killer too!
   type: 0
-  icon: {fileID: 0}
-  dropPrefab: {fileID: 0}
+  icon: {fileID: 21300000, guid: cba25aeb5727b5d4aa19c29d97075f5d, type: 3}
+  dropPrefab: {fileID: 1348157825994357218, guid: 5f19dbe8cc9430f438ec932601c918d0, type: 3}
   canStack: 1
   maxStackAmount: 10
