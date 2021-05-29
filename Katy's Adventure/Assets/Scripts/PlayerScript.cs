@@ -5,37 +5,45 @@ using UnityEngine.AI;
 
 public class PlayerScript : MonoBehaviour
 {
-    Animator playerAnimator;
-    NavMeshAgent navMeshAgent;
-    bool pRunning = false;
-
-    void Start()
+    public Animator anim;
+    public LayerMask whatCanBeClickedOn;
+    private NavMeshAgent myAgent;
+ 
+    private void Start()
     {
-        playerAnimator = GetComponent<Animator>();
-        navMeshAgent = GetComponent<NavMeshAgent>();
+        myAgent = GetComponent<NavMeshAgent>();
     }
 
-    void Update() 
+    /*void UpdateAnimator()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
+        anim.SetBool("MovingForward", false);
+        anim.SetBool("MovingBackward", false);
+        anim.SetBool("MovingLeft", false);
+        anim.SetBool("MovingRight", false);
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (Physics.Raycast(ray, out hit, 100f))
-            {
-                navMeshAgent.destination = hit.point;
+       
+
+        if (myAgent.z > 0.1f)
+            anim.SetBool("MovingForward", true);
+        else if(myAgent.z < -0.1f)
+            anim.SetBool("MovingBackward", true);
+        if (myAgent.x > 0.1f)
+            anim.SetBool("MovingRight", true);
+        else if (myAgent.x < -0.1f)
+            anim.SetBool("MovingLeft", true);
+    }
+    */
+ 
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0)) {
+            Ray myRay = Camera.main.ScreenPointToRay (Input.mousePosition);
+            RaycastHit hitInfo;
+
+            if (Physics.Raycast (myRay, out hitInfo, 100, whatCanBeClickedOn)) {
+                myAgent.SetDestination (hitInfo.point);
             }
+
         }
-        if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
-        {
-            pRunning = false;
-        }
-        else
-        {
-            pRunning = true;
-        }
-        playerAnimator.SetBool("isRunning", pRunning);
     }
 }
-

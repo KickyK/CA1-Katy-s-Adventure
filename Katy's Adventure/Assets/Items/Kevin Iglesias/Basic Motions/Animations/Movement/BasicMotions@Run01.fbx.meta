@@ -425,7 +425,7 @@ ModelImporter:
     second: RightHandProp
   - first:
       74: 7400000
-    second: BasicMotions@Run01 - Forwards
+    second: running (1)
   - first:
       74: 7400002
     second: BasicMotions@Run01 - ForwardsLeft
@@ -530,7 +530,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: BasicMotions@Run01 - Forwards
+      name: running (1)
       takeName: BasicMotions@Run01 - Forwards
       internalID: 0
       firstFrame: 0
