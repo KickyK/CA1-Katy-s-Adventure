@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class ItemPickup : Interactable
 {
-    // Start is called before the first frame update
-    void Start()
+    public Item item;
+    public override void Interact()
     {
-        
+        base.Interact();
+
+        PickUp();
     }
 
-    // Update is called once per frame
-    void Update()
+    void PickUp()
     {
-        
+        Debug.Log("Picking Up" + item.name);
+        //add item to inventory
+        Destroy(gameObject);
     }
 }
