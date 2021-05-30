@@ -2096,6 +2096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e58cdbec7b6cd642918905751473533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  focus: {fileID: 0}
   movementMask:
     serializedVersion: 2
     m_Bits: 1024
@@ -2993,9 +2994,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 572447597}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16b36228498edb24483209d3fdd172c0, type: 3}
+  m_Script: {fileID: 11500000, guid: 82f50450fabfa294386f36b6e23190e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  radious: 3
 --- !u!136 &572447601
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4234,6 +4236,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5663018374024361636, guid: 1c6e74d09d3bf9b408d97634be96fff4, type: 3}
   m_PrefabInstance: {fileID: 8608494336415773125}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &728250200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728250199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82f50450fabfa294386f36b6e23190e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radious: 3
 --- !u!65 &728250201
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5532,9 +5547,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1034095160}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16b36228498edb24483209d3fdd172c0, type: 3}
+  m_Script: {fileID: 11500000, guid: 82f50450fabfa294386f36b6e23190e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  radious: 3
 --- !u!136 &1034095164
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7635,6 +7651,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 357490004}
   offset: {x: 0, y: -0.6, z: 0.4}
+  zoomSpeed: 4
+  minZoom: 5
+  maxZoom: 15
   pitch: 2
 --- !u!1001 &1374689761
 PrefabInstance:
@@ -10060,9 +10079,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1829052217}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16b36228498edb24483209d3fdd172c0, type: 3}
+  m_Script: {fileID: 11500000, guid: 82f50450fabfa294386f36b6e23190e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  radious: 3
 --- !u!136 &1829052221
 CapsuleCollider:
   m_ObjectHideFlags: 0

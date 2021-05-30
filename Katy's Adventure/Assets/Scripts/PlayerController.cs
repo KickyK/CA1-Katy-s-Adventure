@@ -6,6 +6,8 @@ using UnityEngine.AI;
 [RequireComponent(typeof(PlayerMotor))]
 public class PlayerController : MonoBehaviour
 {
+    public Interactable focus;
+
     public LayerMask movementMask;
     Camera cam;
     PlayerMotor motor;
@@ -15,7 +17,6 @@ public class PlayerController : MonoBehaviour
         cam = Camera.main;
         motor = GetComponent<PlayerMotor>();
     }
-
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -24,8 +25,10 @@ public class PlayerController : MonoBehaviour
             RaycastHit hit;
 
             if (Physics.Raycast(ray, out hit, 100, movementMask))
-            {
+            {   // move to point to move where the ray hit
                 motor.MoveToPoint(hit.point);
+                // stop focusing on any object
+                RemoveFocus();
             }
         }
 
@@ -36,8 +39,23 @@ public class PlayerController : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, 100));
             {
-                //check an object an object and interact!
+                //check an object an object and interact with right click on the mouse!
+                Interactable interactable = hit.collider.GetComponent<Interactable>();
+                if (interactable != null)
+                {
+                    SetFocus(interactable);
+                }
             }
         }
+    }
+
+    void SetFocus(Interactable newFocus)
+    {
+        focus = newFocus;
+    }
+
+    void RemoveFocus ()
+    {
+        focus = null;
     }
 }
