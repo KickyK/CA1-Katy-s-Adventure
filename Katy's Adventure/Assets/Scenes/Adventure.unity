@@ -785,9 +785,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 186179373}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16b36228498edb24483209d3fdd172c0, type: 3}
+  m_Script: {fileID: 11500000, guid: c6a25351831a99a4f9448d456602e337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  radius: 3
+  interactionTransform: {fileID: 0}
 --- !u!136 &186179377
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2193,9 +2195,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 357490003}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 7e0043553097dc34e867f52b292bb164, type: 3}
-  m_Controller: {fileID: 9100000, guid: 2edef9a76d2553646a25f22728b1cf7c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7f65e923ca5abea429da80966a634ed6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -2230,6 +2232,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f75029f4114ec74cb08de479c194a35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &357490012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357490003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e40e3a1ba0c3f744a7a9de068c12c89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!195 &357490013
@@ -2997,7 +3011,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82f50450fabfa294386f36b6e23190e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radious: 3
+  radius: 3
+  interactionTransform: {fileID: 0}
 --- !u!136 &572447601
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3833,18 +3848,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7642012252694998633, guid: 1d1275ceaaed98e43855dd64c0592154, type: 3}
   m_PrefabInstance: {fileID: 1669977010}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &657407338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 657407336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16b36228498edb24483209d3fdd172c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!136 &657407340
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4248,7 +4251,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82f50450fabfa294386f36b6e23190e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radious: 3
+  radius: 3
+  interactionTransform: {fileID: 0}
 --- !u!65 &728250201
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5550,7 +5554,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82f50450fabfa294386f36b6e23190e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radious: 3
+  radius: 3
+  interactionTransform: {fileID: 0}
 --- !u!136 &1034095164
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6488,18 +6493,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7642012252694998633, guid: 1d1275ceaaed98e43855dd64c0592154, type: 3}
   m_PrefabInstance: {fileID: 1565480454}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1143383096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1143383094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16b36228498edb24483209d3fdd172c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!136 &1143383098
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6774,7 +6767,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7642012253216153813, guid: 1d1275ceaaed98e43855dd64c0592154, type: 3}
       propertyPath: m_Name
-      value: EnemyPlant2
+      value: ItemPickup
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1275ceaaed98e43855dd64c0592154, type: 3}
@@ -10082,7 +10075,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82f50450fabfa294386f36b6e23190e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radious: 3
+  radius: 3
+  interactionTransform: {fileID: 0}
 --- !u!136 &1829052221
 CapsuleCollider:
   m_ObjectHideFlags: 0
